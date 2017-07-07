@@ -1,20 +1,22 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [ansible-openstack](#ansible-openstack)
-  - [Release Info](#release-info)
-  - [Requirements](#requirements)
-  - [Role Variables](#role-variables)
-  - [Dependencies](#dependencies)
-  - [Example Playbook](#example-playbook)
-  - [Requirements](#requirements-1)
-    - [Install required Ansible roles](#install-required-ansible-roles)
-  - [Vagrant Testing](#vagrant-testing)
-    - [Requirements](#requirements-2)
-  - [TODO](#todo)
-  - [License](#license)
-  - [Author Information](#author-information)
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+-   [ansible-openstack](#ansible-openstack)
+    -   [Release Info](#release-info)
+    -   [Requirements](#requirements)
+    -   [Role Variables](#role-variables)
+    -   [Dependencies](#dependencies)
+    -   [Example Playbook](#example-playbook)
+    -   [Requirements](#requirements-1)
+        -   [Install required Ansible roles](#install-required-ansible-roles)
+    -   [Vagrant Testing](#vagrant-testing)
+        -   [Requirements](#requirements-2)
+    -   [TODO](#todo)
+    -   [License](#license)
+    -   [Author Information](#author-information)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -62,7 +64,7 @@ From the root of this repo execute the following:
 ## TODO
 
 -   [ ] Create the following Ansible roles
-    -   [ ] Identity service(keystone)
+    -   [x] Identity service(keystone)
     -   [ ] Image service(glance)
     -   [ ] Compute service(nova)
     -   [ ] Networking service(neutron)
