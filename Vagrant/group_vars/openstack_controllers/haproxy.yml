@@ -21,7 +21,7 @@ haproxy_config: true
 haproxy_configs:
   - name: 'dashboard_cluster-80'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 80
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -42,7 +42,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'galera_cluster-3306'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_backups: true
     backend_backups_primary: '{{ groups[openstack_controllers_group][0] }}'
     backend_servers_bind_port: 3306
@@ -61,7 +61,7 @@ haproxy_configs:
     frontend_name: 'galera_cluster-in'
   - name: 'glance_api_cluster-9292'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 9292
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -82,7 +82,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'glance_registry_cluster-9191'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 9191
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -102,7 +102,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'keystone_admin_cluster-35357'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 35357
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -123,7 +123,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'keystone_public_internal_cluster-5000'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 5000
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -144,7 +144,7 @@ haproxy_configs:
       - 'tcplog'
   # - name: 'nova_ec2_api_cluster-8773'
   #   backend_checks: true
-  #   backend_name: 'openstack_controllers'
+  #   backend_name: '{{ openstack_controllers_group }}'
   #   backend_servers_bind_port: 8773
   #   backend_servers: '{{ groups[openstack_controllers_group] }}'
   #   balance: 'source'
@@ -164,7 +164,7 @@ haproxy_configs:
   #     - 'tcplog'
   - name: 'nova_compute_api_cluster-8774'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 8774
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -185,7 +185,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'nova_metadata_api_cluster-8775'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 8775
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -205,7 +205,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'cinder_api_cluster-8776'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 8776
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -226,7 +226,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'ceilometer_api_cluster-8777'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 8777
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -246,7 +246,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'nova_vncproxy_cluster-6080'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 6080
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -266,7 +266,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'neutron_api_cluster-9696'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 9696
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'
@@ -287,7 +287,7 @@ haproxy_configs:
       - 'tcplog'
   - name: 'swift_proxy_cluster-8080'
     backend_checks: true
-    backend_name: 'openstack_controllers'
+    backend_name: '{{ openstack_controllers_group }}'
     backend_servers_bind_port: 8080
     backend_servers: '{{ groups[openstack_controllers_group] }}'
     balance: 'source'

@@ -13,7 +13,7 @@ galera_cluster_bind_interface: '{{ openstack_management_interface }}'
 galera_cluster_name: 'openstack'
 
 # Define Ansible group in which the nodes exist to be part of the cluster
-galera_cluster_nodes_group: 'openstack_controllers'
+galera_cluster_nodes_group: '{{ openstack_controllers_group }}'
 
 # Define the primary domain name of your environment
 mariadb_pri_domain_name: '{{ pri_domain_name }}'
